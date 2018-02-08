@@ -84,9 +84,9 @@ void Vector::clear()
 //RETURN: reference of this object
 Vector & Vector::operator++()
 {
-	++x;
-	++y;
-	++z;
+	++this->x;
+	++this->y;
+	++this->z;
 
 	return *this;
 }
@@ -100,5 +100,29 @@ Vector Vector::operator++(int)
 {
 	Vector temp(*this);
 	operator++();
+	return temp;
+}
+
+//Overloaded decrement operator(prefix)
+//PRE	: Vector initialized
+//POST	: decrement of each element
+//RETURN: reference of this object
+Vector & Vector::operator--()
+{
+	--this->x;
+	--this->y;
+	--this->z;
+
+	return *this;
+}
+
+//Overloaded decrement operator(postfix)
+//PRE	: Vector initialized
+//POST	: decrement of each element
+//RETURN: reference of this object
+Vector Vector::operator--(int)
+{
+	Vector temp(*this);
+	operator--();
 	return temp;
 }

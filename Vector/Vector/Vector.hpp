@@ -19,6 +19,8 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const Vector & obj);
 	Vector& operator++();
 	Vector operator++(int);
+	Vector&  operator--();
+	Vector operator--(int);
 	friend void swap(Vector &rhs, Vector &lhs);
 	Vector& operator=(Vector rhs);
 	Vector operator+=(const Vector & rhs);
