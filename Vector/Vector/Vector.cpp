@@ -126,3 +126,15 @@ Vector Vector::operator--(int)
 	operator--();
 	return temp;
 }
+
+//Overloaded insertion operator
+//PRE    : (ostream) << (Vector object)
+//POST   : when compiler sees above, it will implement as defined
+//RETURN : ostream
+ostream & operator<<(ostream & os, const Vector & obj)
+{
+	os << "X: " << obj.x << "\tY: " << obj.y 
+		<< "\t Z: " << obj.z << endl;
+
+	return os;
+}
