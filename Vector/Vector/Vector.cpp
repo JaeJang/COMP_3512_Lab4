@@ -224,8 +224,16 @@ Vector Vector::operator*(double value)
 	return temp;
 }
 
+//Overloaded [] operator
+//PRE	: Passed index should be one of 0, 1 or 2
+//RETURN: 0 - x , 1 - y, 2 - z
 double Vector::operator[](int index)
 {
+	if (index != 1 || index != 2 || index != 0) {
+		cout << "Out of bound" << endl;
+		return NULL;
+	}
+
 	if (index == 0)
 		return x;
 	else if (index == 1)
