@@ -71,3 +71,10 @@ void Vector::set_Z(double z)
 	this->z = z;
 }
 
+//Set all coordinates to 0's
+//POST	: set x, y, z to 0
+void Vector::clear()
+{
+	x = y = z = 0;
+}
+
