@@ -223,3 +223,12 @@ Vector Vector::operator*(double value)
 	
 	return temp;
 }
+
+double Vector::operator[](int index)
+{
+	if (index == 0)
+		return x;
+	else if (index == 1)
+		return y;
+	return z;
+}

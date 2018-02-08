@@ -29,6 +29,9 @@ public:
 	friend Vector operator-(Vector lhs, const Vector & rhs);
 	friend double operator*(const Vector & lhs, const Vector & rhs);
 	Vector operator*(double value);
+	
+	
+	double operator[](int index);
 
 
 private:

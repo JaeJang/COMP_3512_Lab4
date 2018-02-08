@@ -42,7 +42,12 @@ int main() {
 
 	cout << b * c << endl;
 
-	cout << b * 2 << endl;
+	cout << b * 2 << endl << endl;
+
+	cout << "b[0]: " << b[0];
+	cout << "b[1]: " << b[1];
+	cout << "b[2]: " << b[2];
+
 	cout << "Press any button to exit";
 	_getch();
 	return 0;
