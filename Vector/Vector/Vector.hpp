@@ -27,7 +27,7 @@ public:
 	friend Vector operator+(Vector lhs, const Vector & rhs);
 	Vector operator-=(const Vector & rhs);
 	friend Vector operator-(Vector lhs, const Vector & rhs);
-	_inline friend double operator*(const Vector & lhs, const Vector & rhs);
+	friend double operator*(const Vector & lhs, const Vector & rhs);
 	Vector operator*(double value);
 
 
