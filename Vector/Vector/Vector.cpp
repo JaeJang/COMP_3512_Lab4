@@ -30,21 +30,21 @@ Vector::~Vector() { }
 //RETURN	: x coordinate
 double Vector::get_X()
 {
-	return 0.0;
+	return x;
 }
 
 //Get y coordinate
 //RETURN	: y coordinate
 double Vector::get_Y()
 {
-	return 0.0;
+	return y;
 }
 
 //Get x coordinate
 //RETURN	: z coordinate
 double Vector::get_Z()
 {
-	return 0.0;
+	return z;
 }
 
 //Set x coordinate
@@ -159,4 +159,23 @@ Vector & Vector::operator=(Vector rhs)
 	return *this;
 }
 
+//Overloaded += operator
+//POST	: rhs Vector is added to lhs Vector
+Vector Vector::operator+=(const Vector & rhs)
+{
+	this->x += rhs.x;
+	this->y += rhs.y;
+	this->z += rhs.z;
+
+	return *this;
+}
+
+//Overloaded + operator
+//POST	: rhs Vector is added to lhs Vector
+//RETURN: current Vector object
+Vector operator+(Vector lhs, const Vector & rhs)
+{
+	lhs += rhs;
+	return lhs;
+}
 
