@@ -78,3 +78,27 @@ void Vector::clear()
 	x = y = z = 0;
 }
 
+//Overloaed increment operator(prefix)
+//PRE	: Vector initialized
+//POST	: increment of each element
+//RETURN: reference of this object
+Vector & Vector::operator++()
+{
+	++x;
+	++y;
+	++z;
+
+	return *this;
+}
+
+//Overloaed increment operator(postfix)
+//PRE	: Vector initialized
+//POST	: increment of each element
+//RETURN: reference of this object
+
+Vector Vector::operator++(int)
+{
+	Vector temp(*this);
+	operator++();
+	return temp;
+}
