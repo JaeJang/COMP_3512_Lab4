@@ -179,3 +179,25 @@ Vector operator+(Vector lhs, const Vector & rhs)
 	return lhs;
 }
 
+//Overloaded -= operator
+//POST	: lhs Vector is subtracted by rhs
+//RETURN: reference of current Vector object
+Vector Vector::operator-=(const Vector & rhs)
+{
+	this->x -= rhs.x;
+	this->y -= rhs.y;
+	this->z -= rhs.z;
+
+	return *this;
+}
+
+
+//Overloaded - operator
+//POST	: lhs Vector is subtracted by rhs
+//RETURN: current Matrix object
+Vector operator-(Vector lhs, const Vector & rhs)
+{
+	lhs -= rhs;
+	return lhs;
+}
+
