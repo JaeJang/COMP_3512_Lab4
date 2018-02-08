@@ -201,3 +201,13 @@ Vector operator-(Vector lhs, const Vector & rhs)
 	return lhs;
 }
 
+//Overloaded * operator
+//PRE	:  both objects are Vector
+//RETURN: the dot product
+double operator*(const Vector & lhs, const Vector & rhs)
+{
+
+	return (lhs.x * rhs.x) + (lhs.y * rhs.y)
+		+ (lhs.z * rhs.z);
+}
+
