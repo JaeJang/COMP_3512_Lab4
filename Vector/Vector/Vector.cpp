@@ -211,3 +211,15 @@ double operator*(const Vector & lhs, const Vector & rhs)
 		+ (lhs.z * rhs.z);
 }
 
+//Overloaded * operator
+//PRE	: A Vector multiply by a double
+//RETURN: The Vector multiplied by the double
+Vector Vector::operator*(double value)
+{
+	Vector temp(*this);
+	temp.set_X(temp.get_X() * value);
+	temp.set_Y(temp.get_Y() * value);
+	temp.set_Z(temp.get_Z() * value);
+	
+	return temp;
+}
