@@ -138,3 +138,25 @@ ostream & operator<<(ostream & os, const Vector & obj)
 
 	return os;
 }
+
+//Swap values between two objects
+//PRE	: both are Vector object
+//POST	: swap each other
+void swap(Vector & rhs, Vector & lhs)
+{
+	std::swap(rhs.x, lhs.x);
+	std::swap(rhs.y, lhs.y);
+	std::swap(rhs.z, lhs.z);
+}
+
+//Overloaded assignment operator
+//PRE	: both are Vecotor object
+//POST	: lhs is overrided with rhs
+Vector & Vector::operator=(Vector rhs)
+{
+	swap(*this, rhs);
+
+	return *this;
+}
+
+
